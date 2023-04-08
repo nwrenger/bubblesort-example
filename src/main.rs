@@ -1,5 +1,4 @@
 fn main() {
-    println!("Hello, world!");
     let mut nums = vec![1, 5, 3, 2, 4, -1];
     bubblesort(&mut nums);
     println!("{:?}", nums);
