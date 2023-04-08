@@ -1,0 +1,2 @@
+# bubblesort-exampl/cocktail-shaked
+This repo contains an example of the bubblesort algorithm written in rust. The default(master) branch is a bubblesort algorithm with a little bit optimization. This branch contains a highly optimized version of the bubblesort algorithm, the Cocktailshakersort algorithm, which is in best cases upto 50% faster but in worse cases as fast as the normal bubblesort algorithm.
