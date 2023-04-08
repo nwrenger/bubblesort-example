@@ -1,20 +1,35 @@
 fn main() {
-    println!("Hello, world!");
     let mut nums = vec![1, 5, 3, 2, 4, -1];
-    bubblesort(&mut nums);
+    cocktailshakersort(&mut nums);
     println!("{:?}", nums);
 }
 
-fn bubblesort(vec: &mut [i32]) {
-    let n = vec.len();
-    let mut newn = 1;
-    while newn >= 1 {
-        newn = 0;
-        for i in 0..n - 1 {
+fn cocktailshakersort(vec: &mut [i32]) {
+    let len = vec.len() - 1;
+    let mut swapped = true;
+    
+    while swapped {
+        swapped = false;
+        for i in 0..len {
             if vec[i] > vec[i + 1] {
                 vec.swap(i, i + 1);
-                newn = i;
+                swapped = true;
             }
+        }
+
+        if !swapped {
+            break;
+        }
+
+        for i in len..0 {
+            if vec[i] > vec[i + 1] {
+                vec.swap(i, i + 1);
+                swapped = true;
+            }
+        }
+
+        if !swapped {
+            break;
         }
     }
 }
